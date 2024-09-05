@@ -2,7 +2,9 @@
 const moviessongsConstainer = document.getElementById("moviessongsCont");
 
 async function getMoviessongs() {
-    const response = await fetch("http://localhost:8080/moviessongs");
+    // here we will change the localhost url to the url thats hosting (in this case Render.com, then Web Service)
+    // make sure to add you endpoint at the end (in this case /moviessongs)
+    const response = await fetch("https://mono-repo-wk4-day1.onrender.com/moviessongs");
     const data = await response.json()
     console.log(data);
     moviessongsConstainer.innerHTML = "";
@@ -24,7 +26,7 @@ async function handlePostMoviessongs(event) {
     const formData = new FormData(form)
     const data = Object.fromEntries(formData)
     console.log(data)
-    await fetch("http://localhost:8080/moviessongs", {
+    await fetch("https://mono-repo-wk4-day1.onrender.com/moviessongs", {
         method: "POST",
         headers: {
             "Content-Type": "application/json",
