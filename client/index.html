@@ -3,11 +3,17 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite & Render exercise</title>
+    <title>mono-repo- Client, Server & Db</title>
     <link rel="stylesheet" href="style.css" />
-    <script type="module" src="/app.js"></script>
+    <script type="module" src="app.js" defer></script>
   </head>
   <body>
-    <h1>hellos there, I works</h1>
+    <h1>Movies and Songs</h1>
+    <form id="moviesSongsForm" class="inputForm">
+      <input id="movieInput" name="movie" placeholder="Movie" />
+      <input id="songInput" name="song" placeholder="Song" />
+      <button>Submit</button>
+    </form>
+    <div id="moviessongsCont" class="dbCont"></div>
   </body>
 </html>
